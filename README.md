@@ -78,8 +78,15 @@ $ npm install dependency 버전 오류가 발생했지만 기존버전 무시하
 프론트엔드 애플리케이션을 개발하기 위해 material-ui 패키지를 사용한다.
 material-ui 관련한 코어 패키지와 emotion에 관련된 패키지를 설치한다.
 ```
-
-
-
+## Todo 컴포넌트 생성
+![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/6a5a809d-2234-4188-946e-1d954b184649)
+```
+Todo 컴포넌트는 간단한 checkbox와 label을 렌더링하는 컴포넌트이다.
+```
+## App 컴포넌트에서 Todo 컴포넌트 사용
+![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/705d84dc-c89f-4fda-91d8-bb569987af6c)
+```
+현재 index.js에는 App 컴포넌트가 렌더링되고 있으므로 App 컴포넌트에서 Todo 컴포넌트를 import 하여 사용한다.
+```
 
 
