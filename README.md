@@ -71,6 +71,7 @@ $ npm install dependency 버전 오류가 발생했지만 기존버전 무시하
 새로이 node_modules 폴더와 package-lock.json 파일이 생성되었다.
 ```
 ## material-ui 패키지 설치
+[material-ui 공식 사이트](https://material-ui.com)
 ![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/4ec81177-14f4-446e-9df4-1e79655d1d1b)
 ![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/61b959f9-3c66-4945-9243-8c38be4157ae)
 ```
