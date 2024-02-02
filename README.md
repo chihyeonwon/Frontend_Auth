@@ -2,6 +2,7 @@
 - Node.js, NPM version 16.14.2 LTS
 - SPA
 - React.js
+- material-ui
 - Visual Studio Code
 
 ## NPM 설치
@@ -69,3 +70,15 @@ $ npm install dependency 버전 오류가 발생했지만 기존버전 무시하
 
 새로이 node_modules 폴더와 package-lock.json 파일이 생성되었다.
 ```
+## material-ui 패키지 설치
+![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/4ec81177-14f4-446e-9df4-1e79655d1d1b)
+![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/61b959f9-3c66-4945-9243-8c38be4157ae)
+```
+프론트엔드 애플리케이션을 개발하기 위해 material-ui 패키지를 사용한다.
+material-ui 관련한 코어 패키지와 emotion에 관련된 패키지를 설치한다.
+```
+
+
+
+
+
