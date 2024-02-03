@@ -88,5 +88,6 @@ Todo 컴포넌트는 간단한 checkbox와 label을 렌더링하는 컴포넌트
 ```
 현재 index.js에는 App 컴포넌트가 렌더링되고 있으므로 App 컴포넌트에서 Todo 컴포넌트를 import 하여 사용한다.
 ```
+## Todo 컴포넌트 두 개 사용
 
 
