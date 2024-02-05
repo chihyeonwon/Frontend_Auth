@@ -5,7 +5,7 @@
 - material-ui
 - Visual Studio Code
 
-## NPM 설치
+#### NPM 설치
 [node.js 설치](https://nodejs.org/en/blog/release/v16.14.2)    
 #### npm version 확인
 ![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/87fb6473-ac15-4340-b1aa-736519822f76)
@@ -70,7 +70,7 @@ $ npm install dependency 버전 오류가 발생했지만 기존버전 무시하
 
 새로이 node_modules 폴더와 package-lock.json 파일이 생성되었다.
 ```
-## material-ui 패키지 설치
+#### material-ui 패키지 설치
 [material-ui 공식 사이트](https://material-ui.com)
 ![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/4ec81177-14f4-446e-9df4-1e79655d1d1b)
 ![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/61b959f9-3c66-4945-9243-8c38be4157ae)
@@ -78,34 +78,41 @@ $ npm install dependency 버전 오류가 발생했지만 기존버전 무시하
 프론트엔드 애플리케이션을 개발하기 위해 material-ui 패키지를 사용한다.
 material-ui 관련한 코어 패키지와 emotion에 관련된 패키지를 설치한다.
 ```
-## Todo 컴포넌트 생성
+#### Todo 컴포넌트 생성
 ![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/6a5a809d-2234-4188-946e-1d954b184649)
 ```
 Todo 컴포넌트는 간단한 checkbox와 label을 렌더링하는 컴포넌트이다.
 ```
-## App 컴포넌트에서 Todo 컴포넌트 사용
+#### App 컴포넌트에서 Todo 컴포넌트 사용
 ![image](https://github.com/wonchihyeon/Todo_Frontend/assets/58906858/705d84dc-c89f-4fda-91d8-bb569987af6c)
 ```
 현재 index.js에는 App 컴포넌트가 렌더링되고 있으므로 App 컴포넌트에서 Todo 컴포넌트를 import 하여 사용한다.
 ```
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/f5ba7264-bc4e-499c-8a6b-f11ef41b9781)
-## Todo 컴포넌트 두 개 사용
+#### Todo 컴포넌트 두 개 사용
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/9837f893-adeb-4aba-ac01-e3b452d7f817)
 ```
 Todo 컴포넌트를 두 번 추가 해준다. JSX도 원하는 컴포넌트를 나열해 원하는 만큼 컴포넌트를 재사용할 수 있다.
 ```
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/ecba75a1-8fc5-489b-877c-77ce18f30bbf)
-## Todo에 상태 매개변수 전달
+#### Todo에 상태 매개변수 전달
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/ae731cea-8718-4774-8573-dfe271ff70dd)
 ```
 useState를 사용해서 매개변수(props.item)에 담겨있는 item을 넘겨받는다.
 ```
-## App.js에서 Todo로 item 전달
+#### App.js에서 Todo로 item 전달
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/c932cd8a-4f27-4129-924d-a29237de4669)
 ```
 useState의 매개변수로 item을 작성하여 Todo 함수로 넘겨준다.
 ```
-## 렌더링한 결과
+#### 렌더링한 결과
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/96af6558-2c25-447c-a400-9cc9b5670dfc)
+#### Todo 아이템 리스트 렌더링
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/f6e17055-d5a7-412d-94ec-923b7a6ca0a0)
+```
+배열에 담긴 Todo 아이템들을 렌더링하기 위해 App.js 코드를 수정한다.
+```
+#### Todo 리스트 렌더링 
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/34bbc517-ee9f-4be0-a4b4-d8b5a809ca1e)
 
 
