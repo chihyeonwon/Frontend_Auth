@@ -95,5 +95,17 @@ Todo 컴포넌트는 간단한 checkbox와 label을 렌더링하는 컴포넌트
 Todo 컴포넌트를 두 번 추가 해준다. JSX도 원하는 컴포넌트를 나열해 원하는 만큼 컴포넌트를 재사용할 수 있다.
 ```
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/ecba75a1-8fc5-489b-877c-77ce18f30bbf)
+## Todo에 상태 매개변수 전달
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/ae731cea-8718-4774-8573-dfe271ff70dd)
+```
+useState를 사용해서 매개변수(props.item)에 담겨있는 item을 넘겨받는다.
+```
+## App.js에서 Todo로 item 전달
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/c932cd8a-4f27-4129-924d-a29237de4669)
+```
+useState의 매개변수로 item을 작성하여 Todo 함수로 넘겨준다.
+```
+## 렌더링한 결과
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/96af6558-2c25-447c-a400-9cc9b5670dfc)
 
 
