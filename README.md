@@ -115,4 +115,22 @@ useState의 매개변수로 item을 작성하여 Todo 함수로 넘겨준다.
 #### Todo 리스트 렌더링 
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/34bbc517-ee9f-4be0-a4b4-d8b5a809ca1e)
 
+#### material-ui를 이용한 Todo 컴포넌트 디자인
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/1a9fda38-0c4f-4e0d-a1bc-9781e945c583)
+```
+material-ui 패키지를 이용해 UI를 변경한다. ListItem, ListItemText, InputBase, CheckBox 등의 컴포넌트를 이용해
+복잡한 CSS를 사용하지 않고도 UI를 개선할 수 있다.
+```
+#### material-ui를 이용한 App 컴포넌트 디자인
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/fdab3905-308d-47e4-ab0f-355590eedf3f)
+```
+App.js에서는 material-ui 패키지의 List와 Paper를 사용하여 ui를 디자인하였다.
+```
+
+
+
+
+
+
+
 
