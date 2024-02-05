@@ -126,6 +126,11 @@ material-ui 패키지를 이용해 UI를 변경한다. ListItem, ListItemText, I
 ```
 App.js에서는 material-ui 패키지의 List와 Paper를 사용하여 ui를 디자인하였다.
 ```
+#### material ui를 이용해 수정한 화면
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/e4600f2c-abe1-42ad-9632-2cdaa332494e)
+
+## Todo 추가
+
 
 
 
