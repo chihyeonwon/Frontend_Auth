@@ -88,6 +88,12 @@ Todo 컴포넌트는 간단한 checkbox와 label을 렌더링하는 컴포넌트
 ```
 현재 index.js에는 App 컴포넌트가 렌더링되고 있으므로 App 컴포넌트에서 Todo 컴포넌트를 import 하여 사용한다.
 ```
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/f5ba7264-bc4e-499c-8a6b-f11ef41b9781)
 ## Todo 컴포넌트 두 개 사용
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/9837f893-adeb-4aba-ac01-e3b452d7f817)
+```
+Todo 컴포넌트를 두 번 추가 해준다. JSX도 원하는 컴포넌트를 나열해 원하는 만큼 컴포넌트를 재사용할 수 있다.
+```
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/ecba75a1-8fc5-489b-877c-77ce18f30bbf)
 
 
