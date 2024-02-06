@@ -130,8 +130,19 @@ App.js에서는 material-ui 패키지의 List와 Paper를 사용하여 ui를 디
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/e4600f2c-abe1-42ad-9632-2cdaa332494e)
 
 ## Todo 추가
-
-
+#### AddTodo.js
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/93fffb11-feb3-4b6a-98e6-06b53264ddec)
+```
+Grid, TextField, Button을 이용해 사용자의 입력을 받을 인풋 필드와 버튼을 생성한다.
+```
+#### App.js: AddTodo 추가
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/3bfaf5ff-9937-4922-a51a-e584306d5841)
+```
+AddTodo로 생성한 UI를 화면에 올리기 위해 App.js에 AddTodo 컴포넌트를 추가한다.
+```
+#### AddTodo UI 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/53451cfa-e267-42b0-8817-66c3ee8c5149)
+#### AddTodo.js: onInputChange 함수 작성
 
 
 
