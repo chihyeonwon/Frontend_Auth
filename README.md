@@ -143,7 +143,17 @@ AddTodo로 생성한 UI를 화면에 올리기 위해 App.js에 AddTodo 컴포�
 #### AddTodo UI 테스팅
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/53451cfa-e267-42b0-8817-66c3ee8c5149)
 #### AddTodo.js: onInputChange 함수 작성
-
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/5d55e653-bac8-41cd-8617-328ea33dd173)
+```
+키보드를 두드릴 때마다 사건 e가 발생하고 현재 화면의 인풋필드에 입력된 글자들이 담겨 있는 e.target.value를
+item의 title로 지정한 후 setItem을 통해 item을 새로 업데이트한다.
+TextField에 사용자 입력이 들어올 때마다 onInputChange 함수가 실행된다.
+```
+#### onInputChange 함수 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/34fcca56-033f-4fce-bf8a-d6d4ddae5316)
+```
+키보드 입력 시 onInputChange 함수가 실행되는 것을 확인할 수 있다.
+```
 
 
 
