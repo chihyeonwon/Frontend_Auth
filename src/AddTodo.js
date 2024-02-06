@@ -18,6 +18,13 @@ const AddTodo = props => {
     console.log(item);
   };
 
+  // enterKeyEventHandler ㅎ마수
+  const enterKeyEventHandler = e => {
+    if (e.key === "Enter") {
+      onButtonClick();
+    }
+  };
+
   return (
     <Grid container style={{ marginTop: 20 }}>
       <Grid xs={11} md={11} item style={{ paddingRight: 16 }}>
@@ -25,6 +32,7 @@ const AddTodo = props => {
           placeholde='Add Todo here'
           fullWidth
           onChange={onInputChange}
+          onKeyPress={enterKeyEventHandler}
           value={item.title}
         />
       </Grid>
