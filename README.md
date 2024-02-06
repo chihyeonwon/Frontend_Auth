@@ -154,9 +154,22 @@ TextField에 사용자 입력이 들어올 때마다 onInputChange 함수가 실
 ```
 키보드 입력 시 onInputChange 함수가 실행되는 것을 확인할 수 있다.
 ```
-
-
-
+#### App.js: addItem 함수 추가
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/e2c95fd0-9340-422b-a807-da2c355509eb)
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/8d89beab-28d9-46ab-b11d-41310676be48)
+```
+App 컴포넌트에 addItem 함수를 추가하고 이 함수를 AddTodo의 프로퍼티로 넘겨서 AddTodo에서 사용한다.
+```
+#### AddTodo.js: addItem 함수 사용
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/fed8c5ed-e282-4222-b21c-8b77ec5e2d5b)
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/58859817-5226-431c-9791-f70de1fa3d0e)
+```
+AddTodo 컴포넌트에서 App.js의 addItem 함수를 props로 넘겨받아서 onButtonClick 함수를 작성한다.
+버튼 클릭 시 onButtonClick이 실행되도록 한다.
+```
+#### onButtonClick 함수 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/d00a3856-7b26-4780-aba1-d6cf73862d87)
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/6bad36d4-ba5f-4c5f-9753-aadc1e624f61)
 
 
 
