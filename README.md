@@ -170,6 +170,10 @@ AddTodo 컴포넌트에서 App.js의 addItem 함수를 props로 넘겨받아서 
 #### onButtonClick 함수 테스팅
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/d00a3856-7b26-4780-aba1-d6cf73862d87)
 ![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/6bad36d4-ba5f-4c5f-9753-aadc1e624f61)
-
+#### AddTodo.js: enterKeyEventHandler 작성
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/6c9c2924-8001-4af9-b376-310758db4cfc)
+```
+Enter 키로 인해 이벤트가 발생하는 경우 onButtonClick() 함수가 실행되도록 엔터키 처리를 위한 핸들러를 작성한다.
+```
 
 
