@@ -216,10 +216,50 @@ Todo 컴포넌트에 deleteItem을 컴포넌트에서 사용하는 부분을 작
 ```
 휴지통 아이콘을 누르면 해당하는 리스트 아이템을 삭제하는 기능을 구현했다.
 ```
+## Todo 수정
+```
+Todo 아이템 수정 기능을 구현한다. 타이틀을 변경하고 싶은 경우와 체크박스를 체크하는 경우 두 가지를 수정할 수 있도록 한다.
 
+타이틀을 변경하고자 할 때는 Todo 컴포넌트에 readOnly 플래그가 있어 readOnly가 true인 경우 아이템 수정이 불가능하고
+flase인 경우 아이템을 수정할 수 있다.
 
+사용자가 어떤 item의 title을 클릭하면 해당 인풋필드는 수정가능한 상태 readOnly가 false인 상태가 된다.
 
-
+사용자가 Enter키 또는 Return 키를 누르면 readOnly가 true인 상태로 전환한다.
+```
+#### Todo.js: readOnly 상태 변수 추가
+```javascript
+const [readOnly, setReadOnly] = useState(true);
+```
+```
+Todo 컴포넌트에 boolean형의 readOnly 변수를 추가한다.
+```
+#### Todo.js: turnOffReadOnly() 함수 추가
+```javascript
+const turnOffReadOnly = () => {
+  setReadOnly(false);
+}
+```
+```
+title 클릭 시 실행될 turnOffReadOnly() 함수를 작성한다. 이 함수는 단순히 readOnly 상태변수의 값을
+true에서 false로 변경해주는 함수이다.
+```
+#### Todo.js: readOnly와 turnOffReadOnly 연결
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/46b0a790-d57d-4716-bd83-2cdbe3723bdb)
+```
+inputProps의 readOnly Props의 값으로 readOnly(true), 즉 기본으로는 읽기만 가능하다를 지정한다.
+onClick 프로퍼티에는 turnOffReadOnly 함수를 연결하여 인풋필드를 클릭 시에는 readOnly의 값을 false로 변경하여
+수정모드로 변경한다.
+```
+#### ReadOnly 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/1693c9a5-2a88-489c-96e8-48c4f8969bf6)
+```
+readOnly가 true인 상태로 수정이 불가하다.
+```
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/01562aa3-6f89-4185-bfde-860d9b1e6860)
+```
+인풋필드를 클릭 시 readOnly가 false인 상태로 전환되어 마우스 커서가 깜빡이는 것으로보아 수정이 가능하다.
+```
 
 
 
