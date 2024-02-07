@@ -175,5 +175,44 @@ AddTodo 컴포넌트에서 App.js의 addItem 함수를 props로 넘겨받아서 
 ```
 Enter 키로 인해 이벤트가 발생하는 경우 onButtonClick() 함수가 실행되도록 엔터키 처리를 위한 핸들러를 작성한다.
 ```
+## Todo 삭제
+#### Todo.js: material-ui 컴포넌트 import
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/a1820659-be0d-4d4b-82e9-13aa83f2994d)
+```
+ListItemSecondaryAction, IconButton, DeletedOutliend 컴포넌트를 사용하기 위해 Todo.js 상단에서 import 한다.
+```
+#### Todo.js: 삭제 버튼 추가
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/1d1b8f62-7ecb-4b5c-8f42-f5b414aea364)
+```
+Todo.js의 render 함수에 삭제 아이콘을 추가한다.
+InputBase의 id와 name 으로 title이 같을 때 item에 고유한 번호를 주고 구분한다. 백엔드와 연결할 때
+백엔드의 id로 대체될 예정이다.
+```
+#### 삭제 아이콘 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/7afa24f1-6ff0-432e-a29b-66c6595c9cbd)
+```
+각 아이템의 오른쪽에 휴지통 모양의 아이콘이 생긴다.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
