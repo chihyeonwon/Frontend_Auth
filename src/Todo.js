@@ -11,6 +11,12 @@ import DeleteOutlined from "@mui/icons-material/DeleteOutlined";
 
 const Todo = props => {
   const [item, setItem] = useState(props.item);
+  const [readOnly, setReadOnly] = useState(true);
+
+  // turnOffReadOnly 함수 작성
+  const turnOffReadOnly = () => {
+    setReadOnly(false);
+  };
 
   const deleteItem = props.deleteItem;
 
@@ -23,7 +29,8 @@ const Todo = props => {
       <Checkbox checked={item.done} />
       <ListItemText>
         <InputBase
-          inputProps={{ "aria-label": "naked" }}
+          inputProps={{ "aria-label": "naked", readOnly: readOnly }}
+          onClick={turnOffReadOnly}
           type='text'
           id={item.id}
           name={item.id}
