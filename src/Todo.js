@@ -46,6 +46,7 @@ const Todo = props => {
           inputProps={{ "aria-label": "naked", readOnly: readOnly }}
           onClick={turnOffReadOnly}
           onKeyDown={turnOnReadOnly}
+          onChange={editEventHandler}
           type='text'
           id={item.id}
           name={item.id}
