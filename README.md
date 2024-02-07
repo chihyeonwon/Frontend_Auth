@@ -260,7 +260,11 @@ readOnly가 true인 상태로 수정이 불가하다.
 ```
 인풋필드를 클릭 시 readOnly가 false인 상태로 전환되어 마우스 커서가 깜빡이는 것으로보아 수정이 가능하다.
 ```
-
+#### Todo.js: turnOnReadOnly 함수 작성
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/0d58f7f1-b675-4069-b981-e8a4799352f9)
+```
+엔터키를 누르면 readOnly 모드를 false에서 true로 변경하는 함수인 turnOnReadOnly 함수를 작성한다.
+```
 
 
 
