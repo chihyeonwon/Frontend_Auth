@@ -211,8 +211,11 @@ Todo 컴포넌트의 deleteItem()에 작성한 deleteItem 함수를 연결한다
 Todo 컴포넌트에 deleteItem을 컴포넌트에서 사용하는 부분을 작성한다.
 또 deleteEventHandler 함수를 삭제 아이콘에 연결한다.
 ```
-
-
+#### Todo 삭제 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/3cc67ec4-c216-41e7-bf25-e1b50ab1fadf)
+```
+휴지통 아이콘을 누르면 해당하는 리스트 아이템을 삭제하는 기능을 구현했다.
+```
 
 
 
