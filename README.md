@@ -265,9 +265,36 @@ readOnly가 true인 상태로 수정이 불가하다.
 ```
 엔터키를 누르면 readOnly 모드를 false에서 true로 변경하는 함수인 turnOnReadOnly 함수를 작성한다.
 ```
-
-
-
+#### App.js: editItem() 함수 작성
+```javascript
+const editItem = () => {
+    setItems([...items]);
+  };
+```
+```
+items의 내부의 값을 변경했기 때문에 새 배열로 초기화해 화면을 다시 렌더링한다.
+```
+#### App.js: Todo 컴포넌트에 editItem 추가
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/1fa26f5b-7b2b-49ca-bc6e-772bef7c0f19)
+```
+Todo 컴포넌트의 Props로 editItem 함수를 넘긴다.
+```
+#### Todo.js: editEventHandler 함수 추가
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/de2cf462-b5c5-4c17-bf6a-f1731b5f5550)
+```
+사용자의 키 입력에 따라 title을 변경해주는 editEventHandler 함수를 구현한다.
+```
+#### Todo.js: editEventHandler 추가
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/178b0756-a41e-417d-99f8-3369445a7c84)
+```
+InputBase의 onChange 프로퍼티에 editEventHandler를 Props로 넘긴다.
+```
+#### 수정 기능 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/f638c122-4a3b-4bd3-b530-f346419c7368)
+```
+ReadOnly 테스트를 작성한 후 인풋필드로 들어가서 ReadOnly 테스트 - 수정으로 텍스트를 수정하였다.
+수정 기능을 구현하였다.
+```
 
 
 
