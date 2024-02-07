@@ -193,7 +193,24 @@ InputBase의 id와 name 으로 title이 같을 때 item에 고유한 번호를 �
 ```
 각 아이템의 오른쪽에 휴지통 모양의 아이콘이 생긴다.
 ```
-
+#### App.js: deleteItem 함수 작성
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/a26e6d86-3c25-41d0-84d7-6de83c8bacbb)
+```
+deleteItem 함수가 하는 일은 기존 items에서 매개변수로 넘어온 item을 제외한 새 items를 items 변수에 저장하는 것이다.
+filter함수를 사용해서 id를 비교하여 item과 id가 같은 경우 제외하는 로직을 작성한다.
+```
+#### App.js: Todo에 delteItem에 연결
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/00a5429f-8e66-45d4-a056-76bb14adbe69)
+```
+Todo 컴포넌트의 deleteItem()에 작성한 deleteItem 함수를 연결한다.
+```
+#### Todo.js: deleteItem() 함수 연결
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/d6db6afa-8ff4-4b1d-ab36-edc8ed3597c2)
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/3c392d91-a021-4e8a-a32d-d77db018ef0f)
+```
+Todo 컴포넌트에 deleteItem을 컴포넌트에서 사용하는 부분을 작성한다.
+또 deleteEventHandler 함수를 삭제 아이콘에 연결한다.
+```
 
 
 
