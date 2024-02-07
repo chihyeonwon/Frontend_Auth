@@ -18,6 +18,13 @@ const Todo = props => {
     setReadOnly(false);
   };
 
+  // turnOnReadOnly 함수 작성
+  const turnOnReadOnly = e => {
+    if (e.key === "Enter") {
+      setReadOnly(true);
+    }
+  };
+
   const deleteItem = props.deleteItem;
 
   const deleteEventHandler = () => {
@@ -31,6 +38,7 @@ const Todo = props => {
         <InputBase
           inputProps={{ "aria-label": "naked", readOnly: readOnly }}
           onClick={turnOffReadOnly}
+          onKeyDown={turnOnReadOnly}
           type='text'
           id={item.id}
           name={item.id}
