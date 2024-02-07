@@ -31,6 +31,13 @@ const Todo = props => {
     deleteItem(item);
   };
 
+  const editItem = props.editItem;
+
+  const editEventHandler = e => {
+    item.title = e.target.value;
+    editItem();
+  };
+
   return (
     <ListItem>
       <Checkbox checked={item.done} />
