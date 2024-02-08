@@ -295,7 +295,15 @@ InputBase의 onChange 프로퍼티에 editEventHandler를 Props로 넘긴다.
 ReadOnly 테스트를 작성한 후 인풋필드로 들어가서 ReadOnly 테스트 - 수정으로 텍스트를 수정하였다.
 수정 기능을 구현하였다.
 ```
-
+#### Todo.js: checkboxEventHandler 함수 구현, 연결
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/1055706a-6848-45d7-84c7-8cbefca76b79)
+```
+checkbox 업데이트를 위해 checkboxEventHandler 코드를 추가한다. 이 함수는 체크박스에 체크가 된 경우 true를
+아닌 경우에 false를 저장한다. Checkbox의 onChange 프로퍼티에 checkboxEventHandler 함수를 연결한다.
+```
+#### 체크박스 테스팅
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/8b785dab-b563-4ac0-be3b-abdba2b0ea63)
+![image](https://github.com/chihyeonwon/Todo_Frontend/assets/58906858/7c704af3-a7ea-47ec-8f36-377331c8aac0)
 
 
 
