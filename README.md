@@ -31,3 +31,20 @@ Origin(localhost:3000 프론트엔드단)에서 백엔드 서버 도메인으로
 
 CORS를 가능하게 하기 위해선 백엔드에서 CORS 방침 설정을 해줘야 한다.
 ```
+#### WebMvcConfig.java
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/1998abff-97a1-490a-a7e3-fb1177c1b237)
+```
+스프링부트 어플리케이션 프로젝트로 돌아가서 config 패키지 아래에 WebMvcConfig 클래스를 작성한다.
+WebMvcConfigurer 인터페이스를 구현한다. addCorsMapping에서 모든 경로에 대해 Origin이 http://localhost:3000인 경우
+GET, POST, PUT, PATCH, DELETE, OPTIONS 메서드를 이용한 요청을 허용한다.
+
+또한 모든 헤더와 인증에 관한 정보 Credential도 허용한다.
+```
+#### CORS 에러 삭제
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/5d1c6226-7a18-48b5-814e-11139e25df0e)
+```
+백엔드 어플리케이션을 수정한 후 재실행하면 더 이상 CORS 에러가 나지 않는 것을 확인할 수 있다.
+```
+
+
+
