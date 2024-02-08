@@ -38,9 +38,14 @@ const Todo = props => {
     editItem();
   };
 
+  const checkboxEventHandler = e => {
+    item.done = e.target.checked;
+    editItem();
+  };
+
   return (
     <ListItem>
-      <Checkbox checked={item.done} />
+      <Checkbox checked={item.done} onChange={checkboxEventHandler} />
       <ListItemText>
         <InputBase
           inputProps={{ "aria-label": "naked", readOnly: readOnly }}
