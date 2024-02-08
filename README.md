@@ -9,7 +9,10 @@
 ```
 
 ## 백엔드 서버 실행
-
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/e7c32536-f73d-49e9-98fe-142b4de6861e)
+```
+이클립스에서 만들어 둔 백엔드 어플리케이션(Todo_Backend)을 실행한다. 여기서 백엔드 서버의 도메인은 localhost:8080이다.
+```
 
 
 
