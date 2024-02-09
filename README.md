@@ -57,5 +57,15 @@ App() 함수를 호출하고 다시 API 호출 -> then의 setItem -> App() -> AP
 이를 방지해주는 것이 리액트 훅 중 Effect 훅인 useEffect() 함수를 이용하면 무한 루프에 빠지지 않고도 처음 리스트를 불러오는
 부분을 구현할 수 있다.
 ```
+#### useEffect로 Todo API 호출
+
+```
+ useEffect는 함수와 배열을 인자로 받는다.
+fetch 함수 호출 부분을 useEffect함수 안으로 넣고, 빈 배열을 넣어줬다.
+
+첫 렌더링 이후에 배열 안의 오브젝트의 값이 변할 때마다 콜백 함수를 부른다.
+```
+#### useEffect
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/df56950a-fb57-43a8-b27b-9a55a5e4ee97)
 
 
