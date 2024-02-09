@@ -58,14 +58,16 @@ App() 함수를 호출하고 다시 API 호출 -> then의 setItem -> App() -> AP
 부분을 구현할 수 있다.
 ```
 #### useEffect로 Todo API 호출
-
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/5b629e11-e414-469c-9c28-d5ffa763c1f3)
 ```
- useEffect는 함수와 배열을 인자로 받는다.
+useEffect는 함수와 배열을 인자로 받는다.
 fetch 함수 호출 부분을 useEffect함수 안으로 넣고, 빈 배열을 넣어줬다.
 
 첫 렌더링 이후에 배열 안의 오브젝트의 값이 변할 때마다 콜백 함수를 부른다.
 ```
-#### useEffect
+#### useEffect를 이용하여 렌더링 무한 루프 탈출
 ![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/df56950a-fb57-43a8-b27b-9a55a5e4ee97)
-
-
+```
+useEffect 함수를 사용하여 첫 번째 인자로 넘겨준 API를 가져오는 fetch함수를 호출한 후 빈 배열을 넘겨줘서
+리액트 렌더링 무한 루프에 빠지는 것을 방지하였다. 
+```
