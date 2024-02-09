@@ -115,4 +115,17 @@ Todo.js에서 editItem을 사용할 때 item을 매개변수로 넘겨줘야 한
 editEventHandler()에서는 프론트엔드에서의 item의 값만 업데이트하고 HTTP 요청은 보내지 않도록 수정한다.
 이후 사용자가 엔터키를 누르는 순간 실행되는 turnOnReadOnly()에서 HTTP 요청을 보내는 editItem()을 실행한다.
 ```
+#### Todo.js: checkboxEventHandler 수정
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/eca33f03-5006-4cdf-9cd2-34b3483642d8)
+```
+체크박스 수정은 간단하다. 체크 상태가 업데이트될 때마다 editItem()을 호출해서 백엔드에 HTTP 요청을 보낸다.
+```
+#### HTTP PUT 업데이트 테스트
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/ef1707df-f2a1-4b53-94bc-f276f0ea1845)
+```
+인풋 필드를 이용해 새 아이템을 추가한 후, 추가된 아이템의 타이틀을 변경하고 엔터를 치면 HTTP/todo PUT 요청을
+확인할 수 있다.
+
+이로서 로컬 환경에서 작동하는 완전한 Todo 애플리케이션을 완성했다.
+```
 
