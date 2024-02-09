@@ -71,3 +71,29 @@ fetch 함수 호출 부분을 useEffect함수 안으로 넣고, 빈 배열을 �
 useEffect 함수를 사용하여 첫 번째 인자로 넘겨준 API를 가져오는 fetch함수를 호출한 후 빈 배열을 넘겨줘서
 리액트 렌더링 무한 루프에 빠지는 것을 방지하였다. 
 ```
+#### Fetch API 사용법
+```
+Fetch 함수는 url을 매개변수로 받거나 url, options를 매개변수로 받을 수 있다. 또 Promise 오브젝트를 반환한다.
+메서드를 명시하고 싶은 경우나 헤더나 바디를 함께 보내야 할 경우에는 두 번째 매개변수에 요청에 대한 정보가 담긴
+오브젝트, options를 넘겨준다.
+```
+#### api-config.js
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/2a39a52a-4c63-4fc1-86f6-96194e4fec54)
+```
+브라우저의 도메인이 localhost인 경우 로컬 호스트에서 동작하는 백엔드 애플리케이션을 사용하도록 url을 설정한다.
+```
+#### ApiService.js
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/75b60523-d1a0-4ade-9282-b0b56b3452a0)
+```
+백엔드로 요청을 보낼 때 사용하기 위한 유틸리티 함수인 call 함수를 작성한다.
+```
+#### App.js: ApiService 사용
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/475bf856-2919-498a-91b3-6a88f160d42c)
+```
+기존 App.js의 코드에서 ApiService의 call 함수를 사용하여 localhost:8080/todo 로 GET, POST, DELETE 요청을 보냈을 때
+각각의 요청에 대한 응답을 불러오도록 한다. 프론트엔드 리액트에서 생성한 json 형식의 item 을 문자열형식으로 바꿔서
+응답바디로 넣는다.
+```
+
+
+
