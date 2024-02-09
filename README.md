@@ -100,5 +100,19 @@ Fetch 함수는 url을 매개변수로 받거나 url, options를 매개변수로
 브라우저를 새로고침한 후 Todo 아이템을 추가한 뒤 새로고침하여도 사라지지 않는다. 또는 프론트엔드 애플리케이션을
 완전히 종료했다가 다시 켜도 사라지지 않는다.
 ```
+## Todo Update 수정
+#### App.js: editItem 함수 수정
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/9eb90be9-a7c8-450e-9869-22ec6210001b)
+```
+Server API를 이용해서 서버 데이터를 업데이트 한후 변경된 내용을 다시 출력하는 두 가지 작업이 필요하다.
 
+Todo.js에서 editItem을 사용할 때 item을 매개변수로 넘겨줘야 한다.
+```
+#### Todo.js: editItem()에 item을 매개변수로 넘기기
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/5a459c9b-9f93-400d-a510-f0d3601ddd24)
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/2df5069e-1442-49d6-9e6e-f5ea7122bed4)
+```
+editEventHandler()에서는 프론트엔드에서의 item의 값만 업데이트하고 HTTP 요청은 보내지 않도록 수정한다.
+이후 사용자가 엔터키를 누르는 순간 실행되는 turnOnReadOnly()에서 HTTP 요청을 보내는 editItem()을 실행한다.
+```
 
