@@ -45,6 +45,17 @@ GET, POST, PUT, PATCH, DELETE, OPTIONS 메서드를 이용한 요청을 허용�
 ```
 백엔드 어플리케이션을 수정한 후 재실행하면 더 이상 CORS 에러가 나지 않는 것을 확인할 수 있다.
 ```
+## Effect Hook을 이용한 Todo 리스트 초기화
+#### Todo API 무한루프
+![image](https://github.com/chihyeonwon/Frontend_Backend/assets/58906858/16c9d233-f4aa-4d3a-8486-10900c2ed28f)
+```
+CORS로 인한 에러메시지는 사라졌지만 네트워크 탭을 열어보면 todo가 끝없이 나열된 것을 확인할 수 있다.
+이는 fetch 함수를 사용한 API 호출이 비동기 호출이여서, 즉 API 호출한 후 응답이 올 때까지 기다리지 않는다.
+fetch함수의 then 함수 체인은 setItem을 부르면 item의 상태가 새로초기화되고 상태가 바뀌었음을 리액트는 재렌더링을 위해
+App() 함수를 호출하고 다시 API 호출 -> then의 setItem -> App() -> API -> setItem -> App() 무한 루프에 빠지게 된다.
 
+이를 방지해주는 것이 리액트 훅 중 Effect 훅인 useEffect() 함수를 이용하면 무한 루프에 빠지지 않고도 처음 리스트를 불러오는
+부분을 구현할 수 있다.
+```
 
 
