@@ -39,4 +39,32 @@ localhost:3000/login 경로는 <Route path="login> element={<Login />} />와 같
 ```
 
 ```
-## Login
+## Login 페이지
+```
+로그인 API 서비스는 /auth/signin 경로였다. 이 경로를 이용해 로그인하는 메서드를 ApiService.js에 작성한다.
+로그인 서비스 함수들을 ApiService.js에 작성한다.
+```
+#### ApiService: signin 함수
+
+```
+
+```
+#### Login.js
+
+```
+
+```
+#### 수정한 로그인 페이지 테스팅
+
+```
+
+```
+#### 로그인 성공
+```
+
+```
+#### 로그인 성공 시 메인 화면으로 리디렉트 ApiService: signin 함수 수정
+
+```
+
+```
