@@ -12,19 +12,27 @@ http://localhost:3000/login url을 치면 리액트 라우터가 이를 가로�
 리액트 애플리케이션이 존재하는 경로로 들어가서 react-router-dom을 설치한다.
 ```
 #### Login Component
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/dff8102c-0b7e-4838-82b3-d585687df177)
 ```
-
+http://localhost:3000/login에서 렌더링할 컴포넌트인 Login 컴포넌트를 작성한다.
 ```
 #### AppRouter Component
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/53b99e0c-b3aa-4706-a0f7-543287920072)
 ```
-
+localhost:3000/login 경로는 <Route path="login> element={<Login />} />와 같이 컴포넌트를 선언하여 실제 경로를
+지정해준다.
+<Routes>는 여러 개의 <Route>를 관리하고 실제로 갖아 적합한 <Route>를 찾아주는 컴포넌트이다.
 ```
 #### index.js 수정
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/1385eaf7-7085-4f05-a97e-4ea35751fd1e)
 ```
-
+가장 처음 렌더링되는 컴포넌트가 AppRouter 컴포넌트가 되도록 수정한다.
+```
+#### 로그인 페이지 테스팅
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/ae797354-cae6-45ba-aba2-dc28ba1acd40)
+```
+프론트앤드를 재시작하고 http://localhost:3000/login 페이지로 들어가면 로그엔 페이지 문구가 뜬다면
+라우팅이 제대로 동작하는 것을 알 수 있다.
 ```
 #### ApiService: 403 redirect
 
