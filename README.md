@@ -56,14 +56,79 @@ ApiService의 call 메서드는 fetch 함수를 부른다. fetch를 이용하면
 http://localhost:3000으로 접근하면 login 페이지로 리디렉트되는 것을 확인할 수 있다.
 ```
 #### Login.js
+```javascript
+const Login = () => {
+  const handleSubmit = event => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const username = data.get("username");
+    const password = data.get("password");
+    // ApiService의 signin 메서드를 사용 해 로그인.
+    signin({ username: username, password: password });
+  };
 
+  return (
+    <Container component='main' maxWidth='xs' style={{ marginTop: "8%" }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Typography component='h1' variant='h5'>
+            로그인
+          </Typography>
+        </Grid>
+      </Grid>
+      <form noValidate onSubmit={handleSubmit}>
+        {" "}
+        {/* submit 버튼을 누르면 handleSubmit이 실행됨. */}
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <TextField
+              variant='outlined'
+              required
+              fullWidth
+              id='username'
+              label='아이디'
+              name='username'
+              autoComplete='username'
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant='outlined'
+              required
+              fullWidth
+              name='password'
+              label='패스워드'
+              type='password'
+              id='password'
+              autoComplete='current-password'
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Button type='submit' fullWidth variant='contained' color='primary'>
+              로그인
+            </Button>
+          </Grid>
+        </Grid>
+      </form>
+    </Container>
+  );
+};
 ```
-
+```
+로그인 컴포넌트는 이메일과 패스워드를 받는 인풋 필드, 로그인 필드로 이루어져 있다.
+사용자가 이메일과 패스워드를 입력한 후 로그인 버튼을 누르면 작성한 ApiService의 signi 메서드를 이용해서
+백엔드의 /auth/singin으로 요청이 전달된다.
 ```
 #### 수정한 로그인 페이지 테스팅
-
+#### Postman으로 유저 생성
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/1b52dbda-6b9c-4d51-848d-42971ee4e385)
+#### 생성한 아이디, 비밀번호로 로그인 페이지에서 로그인 시도
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/a9fdbf57-c5da-4510-b8ff-3a122825994b)
+#### 로그인 성공 (Token alert 메시지 반환)
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/6aa19a11-b357-4b3c-88c5-68bf1b8c69b5)
 ```
-
+POSTMAN으로 새 유저를ㄹ 만든 후 login 페이지에서 로그인을 시도하여 로그인에 성공하면 alert 메시지에
+토큰이 기록되는 것을 확인할 수 있다.
 ```
 #### 로그인 성공
 ```
