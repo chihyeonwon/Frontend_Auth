@@ -130,11 +130,27 @@ const Login = () => {
 POSTMAN으로 새 유저를ㄹ 만든 후 login 페이지에서 로그인을 시도하여 로그인에 성공하면 alert 메시지에
 토큰이 기록되는 것을 확인할 수 있다.
 ```
-#### 로그인 성공
+## 로그인 성공
+#### 로그인 성공 시 메인 화면으로 리디렉트 ApiService: signin 함수 수정
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/e7f6311c-fea2-4f31-bec2-027d7dd4c327)
+```
+로그인에 성공한 경우에는 Todo 리스트가 있는 화면으로 돌아가야 한다. 따라서 토큰이 존재하는 경우 Todo 리스트 화면인
+localhost:3000/으로 돌아가는 로직을 작성해야 한다. ApiService의 signin 함수를 수정한다.
+```
+
+## 로컬 스토리지를 이용한 액세스 토큰 관리
+
+#### 로컬 스토리지 실습
+
 ```
 
 ```
-#### 로그인 성공 시 메인 화면으로 리디렉트 ApiService: signin 함수 수정
+#### 액세스 코드 저장
+
+```
+
+```
+#### ApiService.js: 엑세스 토큰 헤더에 추가
 
 ```
 
