@@ -45,9 +45,15 @@ localhost:3000/login 경로는 <Route path="login> element={<Login />} />와 같
 로그인 서비스 함수들을 ApiService.js에 작성한다.
 ```
 #### ApiService: signin 함수
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/6d33adcc-a40a-40a6-b2fb-f641e8c7e475)
 ```
-
+ApiService의 call 메서드는 fetch 함수를 부른다. fetch를 이용하면 API 콜을 한 후, .then을 이용해 HTTP 응답을 받아온다.
+이때 받아온 HTTP의 응답의 Status 값이 200이라면 정상, 403이라면 인증에 실패한 것이다. 403인 경우 Login 화면으로 리디렉트하는
+로직을 작성해주었다.
+```
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/ef654f76-40a7-4ec7-996a-e8bcabdf3598)
+```
+http://localhost:3000으로 접근하면 login 페이지로 리디렉트되는 것을 확인할 수 있다.
 ```
 #### Login.js
 
