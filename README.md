@@ -213,10 +213,19 @@ API 콜을 할 때마다 로컬 스토리지에서 토큰을 가져와서 헤더
 ApiService에 signout 함수를 작성한다. 로컬스토리지에 있는 액세스 토큰을 모두 null 값으로 만드는 로직이다.
 ```
 #### App 컴포넌트에 네비게이션 바 추가
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/5f6481ef-f30c-4583-aa9c-3cd89cffd1a5)
 ```
-
+material UI에서 제공하는 AppBar와 Toolbar를 사용하여 네비게이션 바 컴포넌트를 생성하고 리스트 렌더링 위에
+이 컴포넌트를 추가한다.
 ```
+#### 네비게이션 바 테스팅
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/137ea3fd-e23c-4380-8857-66c86a9789e6)
+```
+네비게이션 바의 맨 오른쪽에 로그아웃 버튼에 signout 함수를 연결하여 클릭하면 로그아웃이 되도록 기능을 구현하였다.
+```
+#### 로그아웃 기능 구현
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/8e54d4c0-3672-4633-bfb0-3efc3ee5cc7c)
+
 ## 글리치 문제 해결
 
 #### App.js 로딩중 로직 추가
