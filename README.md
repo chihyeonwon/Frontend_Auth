@@ -208,9 +208,9 @@ API 콜을 할 때마다 로컬 스토리지에서 토큰을 가져와서 헤더
 ## 로그아웃과 글리치 해결
 
 #### 로그아웃 서비스
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/48dab3a8-3ad8-4370-88d8-eb83e1009341)
 ```
-
+ApiService에 signout 함수를 작성한다. 로컬스토리지에 있는 액세스 토큰을 모두 null 값으로 만드는 로직이다.
 ```
 #### App 컴포넌트에 네비게이션 바 추가
 
