@@ -226,19 +226,25 @@ material UI에서 제공하는 AppBar와 Toolbar를 사용하여 네비게이션
 #### 로그아웃 기능 구현
 ![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/8e54d4c0-3672-4633-bfb0-3efc3ee5cc7c)
 
-## 글리치 문제 해결
-
-#### App.js 로딩중 로직 추가
-
+## UI 글리치 문제 해결
 ```
-
+Todo 리스트 페이지에 접속한 후 로그인 페이지로 라우팅하기까지 걸리는 시간 때문이다.
+이 시간은 백엔드 서버에 todo를 요청하고 결과를 받아 확인하는 데 걸리는 시간이다.
+로그아웃 상태에서 아무것도 할 수 없지만 UI가 이렇게 오락가락하는 것은 사용성 측면에서 좋지 않다.
+이를 방지하기 위해서 백엔드에서 todo 리스트를 받아오기 전까지는 로딩 중이라는 메시지를 띄우도록 한다.
+```
+#### App.js 로딩중 로직 추가
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/9df96e2f-ef4d-41db-88a7-80603c403230)
+```
+로딩 중이 아닐 때는 todoListPage 컴포넌트를 렌더링하고 todo 백엔드 서버에 요청을 보내고 응답을 받아오는 중인
+로딩 중인 상태일 때는 로딩중...메시지가 보여지는 content 컴포넌트를 렌더링하도록 로직을 작성했다.
 ```
 #### 로딩중 화면 테스트
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/c1262bba-0c1c-45e4-891d-8c354413d69b)
 ```
-
+로그인하지 않은 상태에서 localhost:3000에 접근하면 로딩중..이라는 화면이 뜨다가 로그인 화면으로 전환되는 것을
+알 수 있다.
 ```
-
 ## 계정 생성 페이지
 
 #### ApiService: singup 함수 추가
