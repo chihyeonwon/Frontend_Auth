@@ -141,21 +141,70 @@ localhost:3000/으로 돌아가는 로직을 작성해야 한다. ApiService의 
 ## 로컬 스토리지를 이용한 액세스 토큰 관리
 
 #### 로컬 스토리지 실습
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/12a81c1b-d198-4adf-baf7-cd56253dfab6)
 ```
-
+브라우저의 개발자 도구에서 콘솔에 다음 코드를 작성하여 로컬 스토리지에 아이템을 저장하고 원하는 아이템을 가져왔다.
+```
+#### 스토리지 탭
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/e2d003ea-a2e7-4fa2-aba7-28fdaa605a47)
+```
+Application의 Local Storage를 확인할 수 있다.
+주소 경로마다 따로 저장된다. 따라서 다른 도메인의 자바스크립트는 다른 도메인의 로컬 스토리지를 읽지는 못한다. 
 ```
 #### 액세스 코드 저장
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/7f26c757-cc23-45cf-960a-c40cb61afa78)
 ```
-
+로그인 시 받은 토큰을 로컬 스토리지에 저장하기 위해서 ApiService의 signin 함수를 다음과 같이 수정한다.
 ```
 #### ApiService.js: 엑세스 토큰 헤더에 추가
 
-```
+```javasciprt
+export function call(api, method, request) {
+  let headers = new Headers({
+    "Content-Type": "application/json",
+  });
 
-```
+  // 로컬 스토리지에서 ACCESS TOKEN 가져오기
+  const accessToken = localStorage.getItem("ACCESS_TOKEN");
+  if (accessToken && accessToken !== null) {
+    headers.append("Authorization", "Bearer " + accessToken);
+  }
 
+  let options = {
+    headers: headers,
+    url: API_BASE_URL + api,
+    method: method,
+  };
+  if (request) {
+    // GET method
+    options.body = JSON.stringify(request);
+  }
+  return fetch(options.url, options)
+    .then(response => {
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 403) {
+        window.location.href = "/login"; // redirect
+      } else {
+        new Error(response);
+      }
+    })
+    .catch(error => {
+      console.log("http error");
+      console.log(error);
+    });
+}
+```
+```
+모든 API의 헤더에 액세스 토큰을 추가하는 부분을 구현한다.
+call에 토큰이 존재하는 경우 헤더에 추가하는 로직을 작성한다.
+```
+#### 로그인 성공 시 메인화면으로 라우팅
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/f8771255-a3e3-4272-b52d-eb3d0e06d7cf)
+```
+API 콜을 할 때마다 로컬 스토리지에서 토큰을 가져와서 헤더에 포함시킨다. 올바른 토큰이므로 백엔드는 인증에 성공하고
+메인 화면으로 정상적으로 라우팅될 수 있게 되었다.
+```
 ## 로그아웃과 글리치 해결
 
 #### 로그아웃 서비스
