@@ -252,10 +252,77 @@ Todo 리스트 페이지에 접속한 후 로그인 페이지로 라우팅하기
 ```
 ApiService에 signup 메서드를 추가한다. 이 메서드를 이용해서 백엔드에 signup 요청을 보낸다.
 ```
-#### 계정 생성 페이지
+#### 계정 생성 페이지 SignUp.js
+```javascript
+function SignUp() {
+  const handleSubmit = event => {
+    event.preventDefault();
+    // 오브젝트에서 form에 저장된 데이터를 맵의 형태로 바꿔줌.
+    const data = new FormData(event.target);
+    const username = data.get("username");
+    const password = data.get("password");
+    signup({ username: username, password: password }).then(response => {
+      // 계정 생성 성공 시 login페이지로 리디렉트
+      window.location.href = "/login";
+    });
+  };
 
+  return (
+    <Container component='main' maxWidth='xs' style={{ marginTop: "8%" }}>
+      <form noValidate onSubmit={handleSubmit}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography component='h1' variant='h5'>
+              계정 생성
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              autoComplete='fname'
+              name='username'
+              variant='outlined'
+              required
+              fullWidth
+              id='username'
+              label='아이디'
+              autoFocus
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant='outlined'
+              required
+              fullWidth
+              name='password'
+              label='패스워드'
+              type='password'
+              id='password'
+              autoComplete='current-password'
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Button type='submit' fullWidth variant='contained' color='primary'>
+              계정 생성
+            </Button>
+          </Grid>
+          <Grid item xs={12}>
+            <Link to='/login' variant='body2'>
+              이미 계정이 있습니까? 로그인 하세요.
+            </Link>
+          </Grid>
+        </Grid>
+      </form>
+    </Container>
+  );
+}
 ```
+```
+계정 생성 페이지는 form 부분에 인풋 필드가 들어가고 사용자는 각 인풋 필드에 해당 값을 입력한다.(아이디, 패스워드)
+사용자가 계정 정보를 입력한 후 버튼을 누르면 버튼에 연결된 submitHandle 함수가 실행된다.
+이 함수는 event.target, 즉 form에서 데이터를 가져와 HTTP 요청 바디를 작성한 후 ApiService의 signup 함수를 이용해
+계정 생성 요청을 날린다.
 
+이미 계정이 있읍니까? 로그인하세요 링크를 추가해서 원한다면 로그인 페이지로 이동할 수 있게끔 했다.
 ```
 #### AppRouter: SingUp 라우트 추가
 
