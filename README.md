@@ -330,12 +330,24 @@ function SignUp() {
 AppRouter에서 SignUp 페이지로 가는 라우트를 추가했다. 
 ```
 #### 로그인 컴포넌트 수정
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/377bd754-a0f3-49ea-85e3-6c31f1acb621)
 ```
-
+로그인 컴포넌트에서 계정 생성 페이지로 넘어가는 링크를 작성했다. <Link>의 to="/signup"에 들어가는 값은
+AppRouter에서 지정한 경로와 같아야 한다.
 ```
 #### 계정 생성 페이지 테스트
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/1eadfaa1-e4eb-45fa-adc0-3374a4a1c1f2)
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/61782ef3-953b-4563-a4e2-7662e75273f2)
+```
+로그인 페이지에서 하단의 "계정이 없습니까? 여기서 가입하세요" 링크를 눌러 계정 생성 페이지로 라우팅 되는 것을 확인했다.
 
+또 반대로 계정 생성 페이지에서 하단의 "이미 계정이 있습니까? 로그인 하세요" 링크를 눌러서 로그인 페이지로 라우팅 되는 것을 확인했다.
+```
+#### 계정 생성 테스트
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/c2204660-0c79-4e2a-9867-df7d64bfce09)
+```
+아이디로 hello1@world.com 패스워드로 12345를 계정 생성 페이지에서 입력한 후 계정 생성 버튼을 눌러 계정을 생성하였다.
+이후에 생성한 아이디와 비밀번호로 로그인하여 나머지 기능이 정상적으로 잘 작동되는 것을 확인하였다. 
 ```
 
-```
+
