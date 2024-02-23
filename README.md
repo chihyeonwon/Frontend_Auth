@@ -248,9 +248,9 @@ Todo 리스트 페이지에 접속한 후 로그인 페이지로 라우팅하기
 ## 계정 생성 페이지
 
 #### ApiService: singup 함수 추가
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/5b633cc3-522a-46e7-95db-cb65f9d83c7a)
 ```
-
+ApiService에 signup 메서드를 추가한다. 이 메서드를 이용해서 백엔드에 signup 요청을 보낸다.
 ```
 #### 계정 생성 페이지
 
