@@ -325,9 +325,9 @@ function SignUp() {
 이미 계정이 있읍니까? 로그인하세요 링크를 추가해서 원한다면 로그인 페이지로 이동할 수 있게끔 했다.
 ```
 #### AppRouter: SingUp 라우트 추가
-
+![image](https://github.com/chihyeonwon/Frontend_Auth/assets/58906858/4a660665-fe62-4266-8a2d-9ff064b5598f)
 ```
-
+AppRouter에서 SignUp 페이지로 가는 라우트를 추가했다. 
 ```
 #### 로그인 컴포넌트 수정
 
